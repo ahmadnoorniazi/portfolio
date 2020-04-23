@@ -25,7 +25,7 @@ notifications:
 after_success:
 - chmod 600 deploy-key && mv deploy-key ~/.ssh/id_rsa
 - echo "deploy to 134.122.15.125"
-- ssh deploy@134.122.15.125 sh ./push.sh
+- ssh deploy@134.122.15.125 sh ./deploy.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_92725ca94bf5_key -iv $encrypted_92725ca94bf5_iv
   -in deploy-key.enc -out deploy-key -d
