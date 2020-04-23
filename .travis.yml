@@ -1,0 +1,28 @@
+dist: trusty
+language: node_js
+node_js:
+- 12
+cache:
+  directories:
+  - node_modules
+addons:
+  ssh_known_hosts:
+  - 161.35.1.73
+branches:
+  only:
+  - master
+env:
+  global:
+  - REMOTEAPPDIR=/var/www/
+  - REMOTEUSER=foo
+  - REMOTEHOST=161.35.1.73
+  - PORT=80
+install: yarn
+script:
+- yarn build
+notifications:
+  email: false
+after_success:
+- chmod 600 deploy-key && mv deploy-key ~/.ssh/id_rsa
+- echo "deploy to 161.35.1.73"
+- ssh foo@161.35.1.73 sh ./push.sh

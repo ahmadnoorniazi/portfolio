@@ -1,0 +1,159 @@
+{
+  "main": {
+    "name":"Ahmad_Noor",
+    "occupation":"Full Satck JavaScript Engineer",
+    "description":"i'm Highly motivated self-taught Software Engineer Who Specialized in Javascript",
+    "image":"profilepic.jpg",
+    "bio": "i'm included in one of the most Talented people in Pakistan who has started their journey without Computer Science Degree.i impressed and motivate a lot of peoples through my skills.I love to learn and teach JavaScript & React. I have worked on different client and server side web development frameworks, languages and databases. Full-Stack javaScript Developer with expertise in both frontend & backend.Always contribute to open source projects & focused on performance related things",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "ahmadnoor95m@gmail.com",
+    "phone": "+92-304-4538857",
+    "address":{
+      "street":"DHA Lahore",
+      "city":"Lahore",
+      "state":"Punjab",
+      "zip": "35720"
+    },
+    "website": "http://www.ahmadnoor.tk",
+    "resumedownload":"http://www.ahmadnoor.tk",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"http://twitter.com",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/ahmadnoorniazi",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/ahmadnoorniazi",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"skype",
+        "url":"http://skype.com",
+        "className":"fa fa-skype"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"University?",
+        "degree":"Masters in Beer tasting",
+        "graduated":"April 2007",
+        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      },
+      {
+        "school":"School #1 Maybe College?",
+        "degree":"What did you study 101",
+        "graduated":"March 2003",
+        "description":"Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      }
+    ],
+    "work":[
+      {
+        "company":"MobileLive",
+        "title":"Sr.Software Engineer",
+        "years":"August 2019 - Present",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"UNIT23",
+        "title":"Full Stack Javascript Developer",
+        "years":"October 2017 - august 2019",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      },
+      {
+        "company":"Abacus Consulting",
+        "title":"Javascript Developer",
+        "years":"April 2017 - October 2017",
+        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Javascript",
+        "level":"90%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"95%"
+      },
+      {
+        "name":"VueJs",
+        "level":"60%"
+      },
+      {
+        "name":"NodeJs",
+        "level":"70%"
+      },
+      {
+        "name":"MongoDB",
+        "level":"80%"
+      },
+      {
+        "name":"Git",
+        "level":"90%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"HTML5",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://www.canadianwanderlust.com"
+      },
+      {
+        "title":"Fury Fighting Gear",
+        "category":"(offline now) A fighting gear company I started",
+        "image":"fury-fighting-gear.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Original Thai Food",
+        "category":"Website I built for a restaurant I like in Thailand",
+        "image":"original-thai-food.jpg",
+        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title":"Resume Website",
+        "category":"A React based resume website template",
+        "image":"resume-website.jpg",
+        "url":"http://www.timbakerdev.com"
+      },
+      {
+        "title":"Smirkspace",
+        "category":"(MVP Only) A React and Meteor based chat University project.",
+        "image":"smirkspace.jpg",
+        "url":"http://www.smirkspace.com"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Here you should write some nice things that someone has said about you. No lies though, employers can tell when you are lying.",
+        "user":"Kareem Abdul Jabbar"
+      },
+      {
+        "text":"That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "user":"Steve Wozniak... impersonator"
+      }
+    ]
+  }
+}
