@@ -1,2 +1,2 @@
 echo "Serving ahmadnoor!"
-serve -p 80 -s build
+serve -p 4000 -s build
