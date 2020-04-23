@@ -14,8 +14,8 @@ branches:
 env:
   global:
   - REMOTEAPPDIR=/var/www/
-  - REMOTEUSER=foo
-  - REMOTEHOST=161.35.1.73
+  - REMOTEUSER=deploy
+  - REMOTEHOST=134.122.15.125
   - PORT=80
 install: yarn
 script:
@@ -24,8 +24,8 @@ notifications:
   email: false
 after_success:
 - chmod 600 deploy-key && mv deploy-key ~/.ssh/id_rsa
-- echo "deploy to 161.35.1.73"
-- ssh deploy@161.35.1.73 sh ./push.sh
+- echo "deploy to 134.122.15.125"
+- ssh deploy@134.122.15.125 sh ./push.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_92725ca94bf5_key -iv $encrypted_92725ca94bf5_iv
   -in deploy-key.enc -out deploy-key -d
