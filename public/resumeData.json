@@ -1,6 +1,6 @@
 {
   "main": {
-    "name":"Ahmad_Noor",
+    "name":"Ahmad Noor",
     "occupation":"Full Satck JavaScript Engineer",
     "description":"i'm Highly motivated self-taught Software Engineer Who Specialized in Javascript",
     "image":"profilepic.jpg",
@@ -113,7 +113,7 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
+        "title":"Freedom Mobile",
         "category":"My Travel Blog for my post-university travels",
         "image":"canadian-wanderlust.jpg",
         "url":"https://www.canadianwanderlust.com"
