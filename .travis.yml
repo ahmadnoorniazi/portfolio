@@ -7,7 +7,7 @@ cache:
   - node_modules
 addons:
   ssh_known_hosts:
-  - 161.35.1.73
+  - 134.122.15.125
 branches:
   only:
   - master
