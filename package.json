@@ -19,6 +19,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "deploy": "yarn run build && aws s3 cp build/ s3://ahmadnoor.tk --recursive ",
-    "deploy-pm2": "pm2 start ./server.sh --name ahmad"
+    "deploy-pm2": "npm run build && pm2 start ./server.sh --name ahmad"
   }
 }
