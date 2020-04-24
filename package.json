@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "jquery": "^3.2.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-ga": "^2.3.5",
-    "react-scripts": "1.0.17",
+    "react-scripts": "^3.4.1",
     "serve": "^11.3.0"
   },
   "scripts": {
@@ -20,5 +20,17 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts}\"",
     "deploy": "yarn run build && aws s3 cp build/ s3://ahmadnoor.tk --recursive ",
     "deploy-pm2": "npm run build && pm2 start ./server.sh --name ahmadnoor"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
