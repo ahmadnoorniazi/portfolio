@@ -16,25 +16,30 @@ class App extends Component {
     super(props);
     this.state = {
       foo: 'bar',
-      resumeData: {}
+      resumeData: {},
+      loading: false
     };
     ReactGA.initialize('UA-110570651-1');
     ReactGA.pageview(window.location.pathname);
   }
 
-  getResumeData(){
-    $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
+  getResumeData = async () => {
+    this.setState({
+      loading: true
+     })
+    const res = await fetch('/resumeData.json',{
+      headers: {
+        'Content-Type': 'application/json'
+      },
+     }).then(val => val.json())
+
+    this.setState({
+      resumeData: res
+     })
+     this.setState({
+      loading: false
+     })
+
   }
 
   componentDidMount(){
@@ -42,9 +47,16 @@ class App extends Component {
   }
 
   render() {
+
+    if (this.state.loading){
+      return (
+        <div style={{textAlign: "center"}}>
+      <img style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>
+      )
+    }
     return (
-      <Suspense fallback={<div style={{textAlign: "center", position: "absolute", top: "50%"}}>
-      <img src='/images/loader.gif' /></div>}>
+      <Suspense fallback={<div style={{textAlign: "center"}}>
+      <img style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
         <div className="App">
           <Header data={this.state.resumeData.main}/>
           <About data={this.state.resumeData.main}/>
