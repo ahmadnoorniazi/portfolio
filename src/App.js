@@ -28,7 +28,6 @@ class App extends Component {
       dataType:'json',
       cache: false,
       success: function(data){
-        console.log('dattttta', data)
         this.setState({resumeData: data});
       }.bind(this),
       error: function(xhr, status, err){
@@ -44,7 +43,8 @@ class App extends Component {
 
   render() {
     return (
-      <Suspense fallback={<h1>Loading....</h1>}>
+      <Suspense fallback={<div style={{textAlign: "center", position: "absolute", top: "50%"}}>
+      <img src='/images/loader.gif' /></div>}>
         <div className="App">
           <Header data={this.state.resumeData.main}/>
           <About data={this.state.resumeData.main}/>
