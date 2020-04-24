@@ -1,6 +1,5 @@
 import React, { Component, lazy, Suspense } from 'react';
 import ReactGA from 'react-ga';
-import $ from 'jquery';
 import './App.css';
 const  Header = lazy(() => import('./Components/Header'));
 const Footer = lazy(() => import('./Components/Footer'));
@@ -51,12 +50,12 @@ class App extends Component {
     if (this.state.loading){
       return (
         <div style={{textAlign: "center"}}>
-      <img style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>
+      <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>
       )
     }
     return (
       <Suspense fallback={<div style={{textAlign: "center"}}>
-      <img style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
+      <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
         <div className="App">
           <Header data={this.state.resumeData.main}/>
           <About data={this.state.resumeData.main}/>
