@@ -39,7 +39,7 @@ e. Others
 
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
+abbr, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
@@ -68,7 +68,9 @@ canvas,
 video {
    display: inline-block;
 }
-
+.address {
+   color: #fff;
+}
 audio:not([controls]) {
    display: none;
    height: 0;
@@ -94,7 +96,9 @@ q:before, q:after {
    content: '';
    content: none;
 }
-
+#resume p {
+   color: black;
+}
 ins {
    background-color: #ff9;
    color: #000;
