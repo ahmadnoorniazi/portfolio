@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component, lazy, Suspense } from 'react';
 import ReactGA from 'react-ga';
 import './App.css';

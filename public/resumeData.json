@@ -57,14 +57,15 @@
     ],
     "work":[
       {
-        "company":"MobileLive",
-        "title":"Sr.Software Engineer",
+        "company":"mobileLIVE Inc",
+        "title":"Software Engineer",
         "years":"August 2019 - Present",
-        "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description":
+        "I have been working at mobileLive for the past year as Fullstack Javascript Engineer.i am Taking part in building new front-end site for a client and Participating in providing mentoring and training for junior developers.i Greatly focused on cross-browser compatibility, responsive design with a mobile-first approach, user interaction, web accessibility and client-side.i am also working in NodeJs for Implementing web development life cycle policies and procedures REST API "
       },
       {
         "company":"UNIT23",
-        "title":"Full Stack Javascript Developer",
+        "title":"Full Stack Developer",
         "years":"October 2017 - august 2019",
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
       },
