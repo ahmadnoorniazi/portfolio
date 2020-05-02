@@ -18,8 +18,8 @@ function WorkDetail({data, heading, span}) {
     <Flex justifyContent="center" m={[0,0,50]} flexWrap='wrap' flexDirection={['column', 'column', "row"]}>
       {data && data.work && data.work.map(item => (
       <Box width={[1,1,1 / 4]} px={15} my={20}>
-\      <Cards 
-        imagePath={`/images/${item.imageKey}.png`}
+      <Cards 
+        imagePath={`/images/${item.imageKey}`}
         span={item.company}
         heading={item.title}
         >

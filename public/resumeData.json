@@ -60,6 +60,7 @@
         "company":"mobileLIVE Inc",
         "title":"Software Engineer",
         "years":"August 2019 - Present",
+        "imageKey": "mobileLive.png",
         "description":
         "I have been working at mobileLive for the past year as Fullstack Javascript Engineer.i am Taking part in building new front-end site for a client and Participating in providing mentoring and training for junior developers.i Greatly focused on cross-browser compatibility, responsive design with a mobile-first approach, user interaction, web accessibility and client-side.i am also working in NodeJs for Implementing web development life cycle policies and procedures REST API "
       },
@@ -67,12 +68,14 @@
         "company":"UNIT23",
         "title":"Full Stack Developer",
         "years":"October 2017 - august 2019",
+        "imageKey": "unit23.png",
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
       },
       {
         "company":"Abacus Consulting",
         "title":"Javascript Developer",
         "years":"April 2017 - October 2017",
+        "imageKey": "abacus.jpg",
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
       }
     ],
