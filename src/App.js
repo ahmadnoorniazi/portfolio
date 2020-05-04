@@ -71,6 +71,12 @@ class App extends Component {
             <meta charSet="utf-8" />
             <title>Ahmad Noor Portfolio</title>
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
+            <meta
+            id="og_description"
+            property="og:description"
+            content="Software Engineer at mobileLive"
+          />
+          <meta property="og:url" content="www.ahmadnoor.tech" />  
           </Helmet>
           <Headers>
           <Tabs tabsList={[
