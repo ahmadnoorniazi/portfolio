@@ -1,63 +1,37 @@
 /* eslint-disable */
 
 import React, { Component } from 'react';
+import { Flex, Box as Wrapper, Text} from 'rebass'
+import Headers from './Headers/index'
+import Tabs from './Tabs/index'
+import theme from '../theme';
+import styled from 'styled-components'
+import {layout,compose, position } from 'styled-system';
 
-class Header extends Component {
-  render() {
-    if (this.props.data) {
-      var { name } = this.props.data;
-      var { occupation } = this.props.data;
-      var { description } = this.props.data;
-      var networks = this.props.data.social.map((network) => <li key={network.name}><a href={network.url}><i className={network.className} /></a></li>);
-    }
+const Box = styled(Wrapper)`
+${compose(layout,position)}`
 
-    return (
-      <header id="home">
+const Header = () => {
+  const height = window.innerHeight
+  const width = window.innerWidth
 
-        <nav id="nav-wrap">
-
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
-
-          <ul id="nav" className="nav">
-            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-            <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-            <li><a className="smoothscroll" href="#contact">Contact</a></li>
-          </ul>
-
-        </nav>
-
-        <div className="row banner">
-          <div className="banner-text">
-            <h1 className="responsive-headline">
-              I'm
-              {name}
-              .
-            </h1>
-            <h3>
-              <span>{occupation}</span>
-              .
-              {' '}
-              {description}
-              .
-            </h3>
-            <hr />
-            <ul className="social">
-              {networks}
-            </ul>
-          </div>
-        </div>
-
-        <p className="scrolldown">
-          <a className="smoothscroll" href="#about"><i className="icon-down-circle" /></a>
-        </p>
-
-      </header>
-    );
-  }
-}
+  return (
+    <Box id="home">
+     <Box width={["100%", width]} bg="primary" height={["300px", height]} sx={{backgroundImage:  `url(https://images.pexels.com/photos/231021/pexels-photo-231021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`, position: "relative", textAlign: "center"}}>
+        <Box left={['10%', '10%', "30%"]} width={['90%', "700px"]} sx={{position: "absolute", top:"20%"}}>
+          <Text textAlign="initial" as="h1" color="white" lineHeight={['40px', '40px', "90px"]} fontSize={['40px', '40px', "80px"]}>
+            Hi, I Am 
+          </Text>
+          <Text textAlign="initial" as="h1" color="secondary" lineHeight={['40px', '40px', "90px"]} fontSize={['40px', '40px', "80px"]}>
+            Ahmad Noor
+          </Text>
+          <Text py="10px" fontFamily="serif" as="p" lineHeight={['20px', '20px', '40px']} fontSize={['20px', '20px', '40px']} px={15} textAlign="initial" color="white" my={30} sx={{borderLeft: `3px solid ${theme.colors.secondary}`}}>
+            Highly Motivated Software Engineer Who Specialized in Javascript
+          </Text>
+        </Box>
+     </Box>
+    </Box>
+  );
+};
 
 export default Header;
