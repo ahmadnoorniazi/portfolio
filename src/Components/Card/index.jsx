@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import {
-  Card, Image, Heading, Box, Flex, Button, Text
+  Card, Image, Box, Flex, Button, Text
 } from 'rebass';
 import Chevron from '../../icons/chevron.svg';
 import ChevronUp from '../../icons/up-chevron.svg';
