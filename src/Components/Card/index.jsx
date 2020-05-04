@@ -19,10 +19,12 @@ function CardDetail({
           <Image sx={{ position: 'inherit', top: '22%' }} src={imagePath} />
         </Box>
         <Flex bg="rgb(25, 26, 27)" sx={{ position: 'relative' }} flexDirection="column" p={3}>
-          <Heading color="#FFFFFF">{heading}</Heading>
-          <Text>{span}</Text>
+          <Box mr={4}>
+            <Text textAlign="justify" width={[1, 1, '85%']} color="#FFFFFF" as="h3" fontSize={['24', '24', '40']}>{heading}</Text>
+            <Text>{span}</Text>
+          </Box>
           <Box
-            mx={3}
+            ml={10}
             width="40px"
             height="40px"
             sx={{
@@ -32,7 +34,7 @@ function CardDetail({
           >
             <Button
               variant="outline"
-              mt={20}
+              mt={10}
               bg="rgb(25, 26, 27)"
               sx={{
                 outline: 0,
@@ -44,7 +46,7 @@ function CardDetail({
               onClick={() => setOpen(!open)}
             >
               {
-                !open ? <Chevron /> : <ChevronUp />
+                !open ? <ChevronUp /> : <Chevron />
               }
             </Button>
           </Box>
