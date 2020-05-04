@@ -10,7 +10,11 @@ const Resume = lazy(() => import('./Components/Resume'));
 const Contact = lazy(() => import( './Components/Contact'));
 const Testimonials = lazy(() => import('./Components/Testimonials'));
 const Portfolio = lazy(() => import('./Components/Portfolio'));
-
+import { ThemeProvider } from 'emotion-theming';
+import theme from './theme';
+import { Flex, Box, Text} from 'rebass'
+import Headers from './Components/Headers'
+import Tabs from './Components/Tabs/index'
 class App extends Component {
 
   constructor(props){
@@ -56,9 +60,39 @@ class App extends Component {
       )
     }
     return (
-      <Suspense fallback={<div style={{textAlign: "center"}}>
+      <Suspense fallback={
+      <div style={{textAlign: "center"}}>
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
+      <ThemeProvider theme={theme}>
         <div className="App">
+          <Headers>
+          <Tabs tabsList={[
+            {
+              label: "Home",
+              key: "home"
+            },
+            {
+              label: "About",
+              key: "about"
+            },
+            {
+              label: "Experience",
+              key: "experience"
+            },
+            {
+              label: "Works",
+              key: "works"
+            },
+            {
+              label: "Blog",
+              key: "blog"
+            },
+            {
+              label: "Contact",
+              key: "contact"
+            },
+          ]} />
+      </Headers>
           <Header data={this.state.resumeData.main}/>
           <About data={this.state.resumeData.main}/>
           <Resume data={this.state.resumeData.resume}/>
@@ -67,6 +101,7 @@ class App extends Component {
           <Contact data={this.state.resumeData.main}/>
           <Footer data={this.state.resumeData.main}/>
         </div>
+        </ThemeProvider>
     </Suspense>
     );
   }
