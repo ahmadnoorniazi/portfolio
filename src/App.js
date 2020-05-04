@@ -15,6 +15,8 @@ import theme from './theme';
 import { Flex, Box, Text} from 'rebass'
 import Headers from './Components/Headers'
 import Tabs from './Components/Tabs/index'
+import {Helmet} from "react-helmet";
+
 class App extends Component {
 
   constructor(props){
@@ -65,6 +67,11 @@ class App extends Component {
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
       <ThemeProvider theme={theme}>
         <div className="App">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Ahmad Noor Portfolio</title>
+            <link rel="canonical" href="https://www.ahmadnoor.tech" />
+          </Helmet>
           <Headers>
           <Tabs tabsList={[
             {
