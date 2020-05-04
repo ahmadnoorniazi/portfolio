@@ -53,7 +53,6 @@ function CardDetail({
           <Box display={open ? 'block' : 'none'} my={10}>
             {children}
           </Box>
-
         </Flex>
       </Card>
     </Box>
