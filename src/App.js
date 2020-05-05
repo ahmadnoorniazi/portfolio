@@ -65,12 +65,14 @@ class App extends Component {
       <Suspense fallback={
       <div style={{textAlign: "center"}}>
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
-      <ThemeProvider theme={theme}>
-        <div className="App">
-          <Helmet>
+      <Helmet>
             <meta charSet="utf-8" />
             <title>Ahmad Noor Portfolio</title>
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
+            <meta
+            name="description"
+            content="Software Engineer at Zoom"
+          />
             <meta
             id="og_description"
             property="og:description"
@@ -78,7 +80,9 @@ class App extends Component {
           />
           <meta property="og:url" content="www.ahmadnoor.tech" />  
           </Helmet>
-          <Headers>
+          <Headers></Headers>
+      <ThemeProvider theme={theme}>
+        <div className="App">
           <Tabs tabsList={[
             {
               label: "Home",
