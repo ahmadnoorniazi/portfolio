@@ -71,7 +71,7 @@ class App extends Component {
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
             <meta
             name="description"
-            content="Software Engineer at Zoom"
+            content="Software Engineer at mobileLive"
           />
             <meta
             id="og_description"
