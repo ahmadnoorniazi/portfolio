@@ -9,10 +9,13 @@ const BaseButton = ({
   <Button
     variant="primary"
     sx={{
+      fontSize: '14px',
+      textTransform: 'uppercase',
+      borderRadius: 4,
       ':hover': {
         background: theme.colors.primary,
         border: `1px solid ${theme.colors.secondary}`,
-        color: theme.colors.secondary
+        color: theme.colors.secondary,
       }
     }}
     fontSize={18}
