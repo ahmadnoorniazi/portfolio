@@ -80,9 +80,9 @@ class App extends Component {
           />
           <meta property="og:url" content="www.ahmadnoor.tech" />  
           </Helmet>
-          <Headers></Headers>
       <ThemeProvider theme={theme}>
         <div className="App">
+        <Headers>
           <Tabs tabsList={[
             {
               label: "Home",
