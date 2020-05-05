@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
-    <meta name="description" content="Ahmad Noor Portfolio Site" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="www.ahmadnoor.tech" />  
+    <meta name="description" content="Ahmad Noor Portfolio Site" data-react-helmet="true" >
+    <meta property="og:type" content="website" data-react-helmet="true">
+    <meta property="og:url" content="www.ahmadnoor.tech" data-react-helmet="true">  
     <script
     type="text/javascript"
     id="hs-script-loader"
@@ -22,7 +22,7 @@
   ></script>
   <!-- End of HubSpot Embed Code -->
 
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title data-react-helmet="true"><%= htmlWebpackPlugin.options.title %></title>
     <style>
       html {
   scroll-behavior: smooth;
