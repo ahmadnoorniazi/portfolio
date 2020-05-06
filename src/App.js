@@ -67,7 +67,7 @@ class App extends Component {
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
       <Helmet>
             <meta charSet="utf-8" />
-            <title>Ahmad Noor Portfolio</title>
+            <title>Ahmad Noor Portfolio | Software Engineer at mobileLive</title>
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
             <meta
             name="description"

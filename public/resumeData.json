@@ -79,38 +79,55 @@
         "description":"Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
       }
     ],
+    "platforms":[
+      {
+        "name":"Frontend",
+        "level":"90"
+      },
+      {
+        "name":"Backend",
+        "level":"60"
+      },
+      {
+        "name":"Mobile",
+        "level":"40"
+      },
+      {
+        "name":"DevOps",
+        "level":"40"
+      }],
     "skills":[
       {
         "name":"Javascript",
-        "level":"90%"
+        "level":"90"
       },
       {
         "name":"ReactJs",
-        "level":"95%"
+        "level":"95"
       },
       {
         "name":"VueJs",
-        "level":"60%"
+        "level":"60"
       },
       {
         "name":"NodeJs",
-        "level":"70%"
+        "level":"70"
       },
       {
         "name":"MongoDB",
-        "level":"80%"
+        "level":"80"
       },
       {
         "name":"Git",
-        "level":"90%"
+        "level":"90"
       },
       {
         "name":"CSS",
-        "level":"90%"
+        "level":"90"
       },
       {
         "name":"HTML5",
-        "level":"80%"
+        "level":"80"
       }
     ]
   },

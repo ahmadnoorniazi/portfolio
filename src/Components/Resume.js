@@ -9,6 +9,7 @@ import Cards from './Card';
 import SpanText from './SpanText';
 import BorderText from './BorderText';
 import Paragraph from './Paragraph';
+import Canvas from './Canvas';
 
 function WorkDetail({data, heading, span}) {
   return (
@@ -29,7 +30,7 @@ function WorkDetail({data, heading, span}) {
           </Box>
       </Flex> 
     {data && data.work && data.work.map(item => (
-      <Box width={[1,1,1 / 4]} px={15} my={20}>
+      <Box width={[1,1, data.work.length <= 3 ? 1 / 3 : 1 / 4]} px={15} my={20}>
       <Cards 
         imagePath={`/images/${item.imageKey}`}
         span={item.company}
@@ -41,6 +42,18 @@ function WorkDetail({data, heading, span}) {
       </Cards>
     </Box>
     ))}
+    <Flex width={1} flexWrap='wrap' justifyContent="space-between" px={15} flexDirection={['column', 'column', "row"]} my={40}>
+    {
+      data.platforms.map(val => (
+        <Box width={[1,1, 1 / 4]} sx={{textAlign: "-webkit-center"}}>
+          <Canvas percentage={val.level} />
+          <Paragraph fontSize="24px" fontWeight={600} my={15} color="white">
+            {val.name}
+          </Paragraph>
+        </Box>
+      ))
+    }
+    </Flex>
     </Flex>
     </Box>
 
