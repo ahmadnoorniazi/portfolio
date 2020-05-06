@@ -72,13 +72,14 @@ class App extends Component {
             <meta
             name="description"
             content="Software Engineer at mobileLive"
-          />
+            />
             <meta
             id="og_description"
             property="og:description"
             content="Software Engineer at mobileLive"
           />
-          <meta property="og:url" content="www.ahmadnoor.tech" />  
+          <meta property="og:url" content="www.ahmadnoor.tech" /> 
+          <meta name="keywords" content="ahmad noor, javascript, mobileLive, software engneer, frontend developer" />
           </Helmet>
       <ThemeProvider theme={theme}>
         <div className="App">
