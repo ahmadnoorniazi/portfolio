@@ -110,8 +110,8 @@ class App extends Component {
               key: "experience"
             },
             {
-              label: "Works",
-              key: "works"
+              label: "Skills",
+              key: "skills"
             },
             {
               label: "Blog",
@@ -126,7 +126,7 @@ class App extends Component {
           <Header data={this.state.resumeData.main}/>
           <About data={this.state.resumeData.main}/>
           <Resume data={this.state.resumeData.resume}/>
-          <Portfolio data={this.state.resumeData.portfolio}/>
+          <Portfolio data={this.state.resumeData.resume}/>
           <Testimonials data={this.state.resumeData.testimonials}/>
           <Contact data={this.state.resumeData.main}/>
           <Footer data={this.state.resumeData.main}/>
