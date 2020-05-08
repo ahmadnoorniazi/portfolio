@@ -69,30 +69,29 @@ class App extends Component {
             <meta charSet="utf-8" />
             <title>Ahmad Noor Portfolio | Software Engineer at mobileLive</title>
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
+              <meta
+              name="description"
+              content="Software Engineer at mobileLive"
+              />
             <meta
-            name="description"
-            content="Software Engineer at mobileLive"
+              id="og_description"
+              property="og:description"
+              content="Software Engineer at mobileLive"
             />
             <meta
-            id="og_description"
-            property="og:description"
-            content="Software Engineer at mobileLive"
-          />
-          <meta
-            id="og_title"
-            property="og:title"
-            content="Software Engineer at mobileLive"
-          />
-          <meta
-            id="og_title"
-            property="og:image"
-            content="https://cdn.searchenginejournal.com/wp-content/uploads/2018/07/SEO-and-JavaScript-6-Things-You-Need-to-Know-1520x800.png"
-          />
-          <meta property="og:url" content="www.ahmadnoor.tech" /> 
-          <meta property="og:type" content="website" /> 
-
-          <meta name="keywords" content="ahmad noor, javascript, mobileLive, software engneer, frontend developer" />
-          </Helmet>
+              id="og_title"
+              property="og:title"
+              content="Software Engineer at mobileLive"
+            />
+            <meta
+              id="og_title"
+              property="og:image"
+              content="https://cdn.searchenginejournal.com/wp-content/uploads/2018/07/SEO-and-JavaScript-6-Things-You-Need-to-Know-1520x800.png"
+            />
+            <meta property="og:url" content="https://www.ahmadnoor.tech" /> 
+            <meta property="og:type" content="website" /> 
+            <meta name="keywords" content="ahmadnoor, javascript developer,reactjs developer mobileLive, software engneer, frontend developer, ahmadnoor.tech, ahmadnoor potfolio"     data-react-helmet="true" />
+            </Helmet>
       <ThemeProvider theme={theme}>
         <div className="App">
         <Headers>
