@@ -5,8 +5,10 @@ const theme = {
   colors: {
     primary: '#000',
     secondary: '#08d665',
+    hover: '#09c75f',
     textColor: '#c8c6c6',
     white: '#FFFFFF',
+    background: 'rgb(25, 26, 27)'
   },
   buttons: {
     primary: {
