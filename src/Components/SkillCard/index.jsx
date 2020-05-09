@@ -1,38 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  Heading, Card, Box
+  Card, Box, Text, Flex, Heading
 } from 'rebass';
 import Settings from '../../icons/settings.svg';
 import theme from '../../theme';
 
-const SkillCard = () => (
-  <Card
-    width={1}
-    bg="background"
-    sx={{
-      ':hover': {
-        background: theme.colors.hover
-      }
-    }}
-  >
-    <Box m={30}>
-      <Box sx={{ textAlign: 'center' }}>
-        <Settings fill="#08d665" />
-        <Heading color="white"> Back-End </Heading>
+const SkillCard = ({ skillsList, name }) => {
+  const [onHover, setOnHover] = useState(false);
+
+  return (
+    <Card
+      onMouseEnter={() => setOnHover(true)}
+      onMouseLeave={() => setOnHover(false)}
+      width={1}
+      bg="#131617"
+      sx={{
+        ':hover': {
+          background: theme.colors.hover
+        },
+        border: `5px solid ${theme.colors.secondary}`
+      }}
+    >
+      <Box m={30}>
+        <Box sx={{ textAlign: 'center' }}>
+          <Settings fill={onHover ? theme.colors.white : theme.colors.secondary} />
+          <Heading fontWeight="bold" color={theme.colors.white}>{name}</Heading>
+        </Box>
+        <Box height="1px" width={1} bg={onHover ? theme.colors.white : theme.colors.secondary} my={20} />
+        <Box>
+          <ul style={{
+            'list-style-type': 'square', color: '#FFFFFF', fontWeight: 'bold'
+          }}
+          >
+            {
+              skillsList.map((item) => (
+                <li key={item}>
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+        </Box>
       </Box>
-      <Box>
-        <ul style={{ 'list-style-type': 'square', color: '#FFFFFF', marginLeft: '25px' }}>
-          {
-            ['Nodejs', 'ExpressJs', 'Rest Api'].map((item) => (
-              <li>
-                {item}
-              </li>
-            ))
-          }
-        </ul>
-      </Box>
-    </Box>
-  </Card>
-);
+    </Card>
+  );
+};
 
 export default SkillCard;

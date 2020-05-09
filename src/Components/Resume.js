@@ -14,7 +14,7 @@ import Description from './Description';
 
 function WorkDetail({data, heading, span}) {
   return (
-    <Box bg="primary" id="experience" pt={50} px={[10, 10, 130]}>
+    <Box bg="primary" id="experience" pt="50px" px={[10, 10, 130]}>
        <Description description="Where i have worked" primarText="My Experience &" secondaryText="Work History" smallText="My Experience"  />
     <Flex justifyContent="start" p={['10', '10', 0]}  flexWrap='wrap' flexDirection={['column', 'column', "row"]}>
     {data && data.work && data.work.map(item => (
@@ -24,7 +24,7 @@ function WorkDetail({data, heading, span}) {
         span={item.company}
         heading={item.title}
         >
-        <Text sx={{textAlign: "justify"}} fontFamily="sans-serif" color="#FFFFFF">
+        <Text sx={{textAlign: "center"}} fontFamily="sans-serif" color="#FFFFFF">
          {item.description}
         </Text>
       </Cards>

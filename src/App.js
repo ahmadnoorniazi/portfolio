@@ -67,7 +67,7 @@ class App extends Component {
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
       <Helmet>
             <meta charSet="utf-8" />
-            <title>Ahmad Noor Portfolio | Software Engineer at mobileLive</title>
+            <title>Ahmad Noor Personal Portfolio | Software Engineer at mobileLive</title>
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
               <meta
               name="description"
@@ -90,7 +90,7 @@ class App extends Component {
             />
             <meta property="og:url" content="https://www.ahmadnoor.tech" /> 
             <meta property="og:type" content="website" /> 
-            <meta name="keywords" content="ahmadnoor, javascript developer,reactjs developer mobileLive, software engneer, frontend developer, ahmadnoor.tech, ahmadnoor potfolio"     data-react-helmet="true" />
+            <meta name="keywords" content="ahmadnoor, javascript developer,reactjs developer mobileLive, software engneer, frontend developer, ahmadnoor.tech, ahmad noor potfolio"     data-react-helmet="true" />
             </Helmet>
       <ThemeProvider theme={theme}>
         <div className="App">

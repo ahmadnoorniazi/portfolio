@@ -14,20 +14,20 @@ ${compose(layout, position)}`;
 const Box = styled(Main)`
 ${compose(typography)}`;
 
-const About = () => (
+const About = ({ data }) => (
   <Flex
     id="about"
     bg="primary"
-    mb="30px"
+    mb="10px"
     width={1}
-    height="700px"
+    height={['auto', 'auto', '700px']}
     justifyContent="center"
     sx={{
       position: 'relative'
     }}
   >
     <Flex
-      position="absolute"
+      position={['inherit', 'inherit', 'absolute']}
       left={[0, '5%', '20%']}
       top={['10%', '10%', '25%']}
       bottom={['10%', '10%', '25%']}
@@ -52,10 +52,8 @@ const About = () => (
         sx={{ margin: 'auto' }}
       >
         <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" />
-        <Text as="p" fontWeight={400} sx={{ textAlign: 'justify' }} color="white" my={[20, 20, 25]}>
-          Spend more time focusing on the important aspects of your business.
-          Turn to McCartney HR LLC in Brooklyn, NY for HR solutions. As an advanced
-          virtual HR company, we are offering online HR systems that can be customized depending on your business needs.
+        <Text as="p" fontWeight={400} fontFamily="sans-serif" sx={{ textAlign: 'center' }} color="white" py={[20, 20, 25]}>
+          {data.bio}
         </Text>
         <Button px={30}>
           Download CV
