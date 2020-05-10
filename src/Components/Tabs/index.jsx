@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Box, Link, Flex
+  Box, Link as Nav, Flex
 } from 'rebass';
+import styled from 'styled-components';
+import { border, compose } from 'styled-system';
+import './style.css';
+
+const Link = styled(Nav)`
+${compose(border)}`;
 
 function Tabs({ tabsList }) {
   const [activeTab, setActiveTab] = useState('');
@@ -18,11 +24,9 @@ function Tabs({ tabsList }) {
         return (
           <Box
             key={key}
-            width={1 / tabsList.length}
-            sx={{
-              textAlign: 'center',
-              margin: 'auto'
-            }}
+            width={[1, 1, 1 / tabsList.length]}
+            m={[0, 0, 'auto']}
+            textAlign={['initial', 'initial', 'center']}
           >
             <Link
               width={1}
@@ -31,11 +35,14 @@ function Tabs({ tabsList }) {
               onClick={() => setActiveTab(key)}
               color="#c8c6c6 !important"
               fontSize="16px"
+              variant="nav"
+              borderBottom={[activeTab === key ? '2px solid #08d665' : '2px solid rgba(0, 0, 0, .15)', activeTab === key && '2px solid #08d665']}
+              display="block"
               sx={{
                 fontWeight: 'bold',
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
-                borderBottom: activeTab === key && '2px solid #08d665',
+                textDecoration: 'none',
                 ':hover': {
                   borderBottom: '2px solid #08d665'
                 },

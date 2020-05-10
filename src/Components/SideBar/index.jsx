@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Box, Button, Flex } from 'rebass';
 import { MyContext } from '../../globalState';
+import RenderTabs from '../RenderTabs';
 
 const SideBar = () => {
   const { onClickSideBar, isOpenSideBar } = useContext(MyContext);
@@ -28,6 +29,9 @@ const SideBar = () => {
           Close
         </Button>
       </Flex>
+      <Box width={1} my="60px" sx={{ left: 0, position: 'absolute' }}>
+        <RenderTabs />
+      </Box>
     </Box>
 
   );

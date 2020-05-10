@@ -13,11 +13,11 @@ import { ThemeProvider } from 'emotion-theming';
 import theme from './theme';
 import { Flex, Box, Text} from 'rebass'
 import Headers from './Components/Headers'
-import Tabs from './Components/Tabs/index'
 import {Helmet} from "react-helmet";
 import Projects from "./Components/Projects";
 import { Provider, MyContext } from './globalState';
 import SideBar from './Components/SideBar';
+import RenderTabs from './Components/RenderTabs';
 
 function App(){
 const [loading, setIsLoading] = useState(false)
@@ -82,39 +82,11 @@ useEffect(() => {
             </Helmet>
       <ThemeProvider theme={theme}>
         <div className="App">
-        <Headers>
-          <Tabs tabsList={[
-            {
-              label: "Home",
-              key: "home"
-            },
-            {
-              label: "About",
-              key: "about"
-            },
-            {
-              label: "Experience",
-              key: "experience"
-            },
-            {
-              label: "Skills",
-              key: "skills"
-            },
-            {
-              label: "Projects",
-              key: "projects"
-            },
-            {
-              label: "Blog",
-              key: "blog"
-            },
-            {
-              label: "Contact",
-              key: "contact"
-            },
-          ]} />
-      </Headers>
+          <Headers>
+            <RenderTabs />
+          </Headers>
           <Header data={resumeData.main}/>
+
           <SideBar />
           <About data={resumeData.main}/>
           <Resume data={resumeData.resume}/>
