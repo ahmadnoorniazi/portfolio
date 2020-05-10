@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Card, Image, Box, Text, Flex
+  Card, Image, Box, Flex
 } from 'rebass';
 import theme from '../../theme';
 import LinkIcon from '../../icons/multimedia.svg';
