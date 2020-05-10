@@ -11,6 +11,7 @@ import SpanText from './SpanText';
 
 const Flex = styled(Wrapper)`
 ${compose(layout, position)}`;
+
 const Box = styled(Main)`
 ${compose(typography)}`;
 
