@@ -20,8 +20,8 @@ function CardDetail({
         </Box>
         <Flex bg="rgb(25, 26, 27)" sx={{ position: 'relative' }} flexDirection="column" p={3}>
           <Box mr={4}>
-            <Text textAlign="center" width={[1, 1, '85%']} color="#FFFFFF" as="h3" fontSize={['24', '24', '40']}>{heading}</Text>
-            <Text>{span}</Text>
+            <Text textAlign="initial" width={[1, 1, '85%']} color="#FFFFFF" as="h3" fontSize={['24', '24', '40']}>{heading}</Text>
+            <Text py={2} color="gray">{span}</Text>
           </Box>
           <Box
             ml={10}

@@ -1,7 +1,6 @@
 /* eslint-disable */
 
-import React, { Component, lazy, Suspense } from 'react';
-import ReactGA from 'react-ga';
+import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
 import './App.css';
 const  Header = lazy(() => import('./Components/Header'));
 const Footer = lazy(() => import('./Components/Footer'));
@@ -16,52 +15,41 @@ import { Flex, Box, Text} from 'rebass'
 import Headers from './Components/Headers'
 import Tabs from './Components/Tabs/index'
 import {Helmet} from "react-helmet";
+import Projects from "./Components/Projects";
+import { Provider, MyContext } from './globalState';
+import SideBar from './Components/SideBar';
 
-class App extends Component {
+function App(){
+const [loading, setIsLoading] = useState(false)
+const [resumeData, setResumeData] = useState([])
+const [isOpen, onClickSideBar] = useState(false)
+const { isOpenSideBar  } = useContext(MyContext)
 
-  constructor(props){
-    super(props);
-    this.state = {
-      foo: 'bar',
-      resumeData: {},
-      loading: false
-    };
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
-  }
-
-  getResumeData = async () => {
-    this.setState({
-      loading: true
-     })
+useEffect(() => {
+  const getResumeData = async () => {
+    setIsLoading(true)
     const res = await fetch('/resumeData.json',{
       headers: {
         'Content-Type': 'application/json'
       },
      }).then(val => val.json())
+    setResumeData(res)
+    setIsLoading(false)
+  } 
+  getResumeData();
+}, [])
 
-    this.setState({
-      resumeData: res
-     })
-     this.setState({
-      loading: false
-     })
-
-  }
-
-  componentDidMount(){
-    this.getResumeData();
-  }
-
-  render() {
-
-    if (this.state.loading){
+    if (loading){
       return (
         <div style={{textAlign: "center"}}>
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>
       )
     }
     return (
+      <Provider value={{
+        isOpenSideBar: isOpen,
+        onClickSideBar
+      }}>
       <Suspense fallback={
       <div style={{textAlign: "center"}}>
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>}>
@@ -113,6 +101,10 @@ class App extends Component {
               key: "skills"
             },
             {
+              label: "Projects",
+              key: "projects"
+            },
+            {
               label: "Blog",
               key: "blog"
             },
@@ -122,18 +114,20 @@ class App extends Component {
             },
           ]} />
       </Headers>
-          <Header data={this.state.resumeData.main}/>
-          <About data={this.state.resumeData.main}/>
-          <Resume data={this.state.resumeData.resume}/>
-          <Portfolio data={this.state.resumeData.resume}/>
-          <Testimonials data={this.state.resumeData.testimonials}/>
-          <Contact data={this.state.resumeData.main}/>
-          <Footer data={this.state.resumeData.main}/>
+          <Header data={resumeData.main}/>
+          <SideBar />
+          <About data={resumeData.main}/>
+          <Resume data={resumeData.resume}/>
+          <Portfolio data={resumeData.resume}/>
+          <Projects />
+          <Testimonials data={resumeData.testimonials}/>
+          <Contact data={resumeData.main}/>
+          <Footer data={resumeData.main}/>
         </div>
         </ThemeProvider>
     </Suspense>
-    );
+    </Provider>
+  )
   }
-}
 
 export default App;

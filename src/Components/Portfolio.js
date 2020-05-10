@@ -7,6 +7,9 @@ import Canvas from './Canvas';
 import Paragraph from './Paragraph';
 import SkillCard from './SkillCard';
 import SpanText from './SpanText';
+import Devops from '../icons/settings.svg';
+import Frontend from '../icons/applicant.svg'
+import Backend from '../icons/computing-cloud.svg'
 
 const Skills = ({data}) => {
   return (
@@ -15,14 +18,17 @@ const Skills = ({data}) => {
       <Flex width={1} flexWrap='wrap' justifyContent="start" px={[1, 1, 15]} flexDirection={['column', 'column', 'row']} my={40}>
       {  [{
         name: 'Back-End Development',
+        Icon: Backend ,
         skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
       },
       {
         name: 'Frontend Development',
+        Icon: Frontend,
         skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
       },
       {
         name: 'DevOps',
+        Icon: Devops,
         skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
       }
     ].map((item) => (

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import {
-  Card, Box, Text, Flex, Heading
+  Card, Box, Heading
 } from 'rebass';
-import Settings from '../../icons/settings.svg';
 import theme from '../../theme';
 
-const SkillCard = ({ skillsList, name }) => {
+const SkillCard = ({ skillsList, name, Icon }) => {
   const [onHover, setOnHover] = useState(false);
 
   return (
@@ -23,13 +22,13 @@ const SkillCard = ({ skillsList, name }) => {
     >
       <Box m={30}>
         <Box sx={{ textAlign: 'center' }}>
-          <Settings fill={onHover ? theme.colors.white : theme.colors.secondary} />
+          <Icon fill={onHover ? theme.colors.white : theme.colors.secondary} />
           <Heading fontWeight="bold" color={theme.colors.white}>{name}</Heading>
         </Box>
         <Box height="1px" width={1} bg={onHover ? theme.colors.white : theme.colors.secondary} my={20} />
         <Box>
           <ul style={{
-            'list-style-type': 'square', color: '#FFFFFF', fontWeight: 'bold'
+            listStyleType: 'square', color: '#FFFFFF', fontWeight: 'bold'
           }}
           >
             {

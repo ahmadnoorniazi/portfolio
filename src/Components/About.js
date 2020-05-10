@@ -53,7 +53,7 @@ const About = ({ data }) => (
         sx={{ margin: 'auto' }}
       >
         <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" />
-        <Text as="p" fontWeight={400} fontFamily="sans-serif" sx={{ textAlign: 'center' }} color="white" py={[20, 20, 25]}>
+        <Text as="p" fontWeight={400} fontFamily="sans-serif" sx={{ textAlign: 'justify' }} color="white" py={[20, 20, 25]}>
           {data.bio}
         </Text>
         <Button px={30}>
