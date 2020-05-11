@@ -8,7 +8,12 @@ const BaseButton = ({
 }) => (
   <Button
     variant="primary"
+    py="13px"
+    pr="70px"
+    pl="25px"
+    fontWeight="bold"
     sx={{
+      lineHeight: '27px',
       fontSize: '14px',
       textTransform: 'uppercase',
       borderRadius: 4,

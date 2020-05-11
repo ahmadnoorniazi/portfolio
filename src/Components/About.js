@@ -18,19 +18,18 @@ ${compose(typography)}`;
 const About = ({ data }) => (
   <Flex
     id="about"
-    bg="primary"
-    mb="10px"
     width={1}
-    height={['auto', 'auto', '700px']}
+    height={['auto', 'auto', '690px']}
     justifyContent="center"
     sx={{
-      position: 'relative'
+      position: 'relative',
     }}
+    bg="primary"
   >
     <Flex
       position={['inherit', 'inherit', 'absolute']}
       left={[0, '5%', '20%']}
-      top={['10%', '10%', '25%']}
+      top={['0', '0', '25%']}
       bottom={['10%', '10%', '25%']}
       flexDirection={['column', 'column', 'row']}
     >

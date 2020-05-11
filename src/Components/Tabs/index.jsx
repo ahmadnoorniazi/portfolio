@@ -4,7 +4,6 @@ import {
 } from 'rebass';
 import styled from 'styled-components';
 import { border, compose } from 'styled-system';
-import './style.css';
 
 const Link = styled(Nav)`
 ${compose(border)}`;
@@ -30,7 +29,7 @@ function Tabs({ tabsList }) {
           >
             <Link
               width={1}
-              py={26}
+              py={20}
               px={20}
               onClick={() => setActiveTab(key)}
               color="#c8c6c6 !important"

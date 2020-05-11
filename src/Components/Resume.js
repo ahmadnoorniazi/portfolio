@@ -14,8 +14,16 @@ import Description from './Description';
 
 function WorkDetail({data, heading, span}) {
   return (
-    <Box bg="primary" id="experience" pt="50px" px={[10, 10, 130]}>
-       <Description description="Where i have worked" primarText="My Experience &" secondaryText="Work History" smallText="My Experience"  />
+    <Box sx={{ 
+      backgroundImage: 'url(/images/project-bg.jpg)',  
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      overflow: 'hidden'}} 
+      id="experience" 
+      pt="50px" 
+      px={[10, 10, 130]}
+    >
+      <Description description="Where i have worked" primarText="My Experience &" secondaryText="Work History" smallText="My Experience"  />
     <Flex justifyContent="start" p={['10', '10', 0]}  flexWrap='wrap' flexDirection={['column', 'column', "row"]}>
     {data && data.work && data.work.map(item => (
       <Box width={[1,1, data.work.length <= 3 ? 1 / 3 : 1 / 4]} px={15} my={20}>

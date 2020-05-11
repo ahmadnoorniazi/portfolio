@@ -12,7 +12,7 @@ const SkillCard = ({ skillsList, name, Icon }) => {
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
       width={1}
-      bg="#131617"
+      bg="primary"
       sx={{
         ':hover': {
           background: theme.colors.hover
@@ -22,8 +22,8 @@ const SkillCard = ({ skillsList, name, Icon }) => {
     >
       <Box m={30}>
         <Box sx={{ textAlign: 'center' }}>
-          <Icon fill={onHover ? theme.colors.white : theme.colors.secondary} />
-          <Heading fontWeight="bold" color={theme.colors.white}>{name}</Heading>
+          <Icon fill={theme.colors.white} />
+          <Heading fontWeight="bold" color={onHover ? theme.colors.white : theme.colors.secondary}>{name}</Heading>
         </Box>
         <Box height="1px" width={1} bg={onHover ? theme.colors.white : theme.colors.secondary} my={20} />
         <Box>

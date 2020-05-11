@@ -92,7 +92,6 @@ useEffect(() => {
           <Resume data={resumeData.resume}/>
           <Portfolio data={resumeData.resume}/>
           <Projects />
-          <Testimonials data={resumeData.testimonials}/>
           <Contact data={resumeData.main}/>
           <Footer data={resumeData.main}/>
         </div>

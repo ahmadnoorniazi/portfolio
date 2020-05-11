@@ -13,7 +13,16 @@ import Backend from '../icons/computing-cloud.svg'
 
 const Skills = ({data}) => {
   return (
-    <Box bg="primary" id="skills" pt={50} px={[10, 10, 130]}>
+    <Box 
+    sx={{
+      backgroundImage:  `url(/images/wlc-bg1.jpg)`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      overflow: 'hidden'
+    }} 
+    id="skills" 
+    pt={50} 
+    px={[10, 10, 130]}>
       <Description primarText="My" secondaryText="Skills" smallText="My Skills"  />
       <Flex width={1} flexWrap='wrap' justifyContent="start" px={[1, 1, 15]} flexDirection={['column', 'column', 'row']} my={40}>
       {  [{

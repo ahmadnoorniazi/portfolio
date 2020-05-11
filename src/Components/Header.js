@@ -1,35 +1,55 @@
-/* eslint-disable */
 
-import React, { Component } from 'react';
-import { Flex, Box as Wrapper, Text} from 'rebass'
-import Headers from './Headers/index'
-import Tabs from './Tabs/index'
+import React from 'react';
+import { Box as Wrapper, Text } from 'rebass';
+import styled from 'styled-components';
+import { layout, compose, position } from 'styled-system';
 import theme from '../theme';
-import styled from 'styled-components'
-import {layout,compose, position } from 'styled-system';
 
 const Box = styled(Wrapper)`
-${compose(layout,position)}`
+${compose(layout, position)}`;
 
 const Header = () => {
-  const height = window.innerHeight
-  const width = window.innerWidth
+  const height = window.innerHeight;
+  const width = window.innerWidth;
 
   return (
     <Box id="home">
-     <Box width={["100%", width]} bg="primary" height={["300px", height]} sx={{backgroundImage:  `url(https://images.pexels.com/photos/231021/pexels-photo-231021.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)`, position: "relative", textAlign: "center"}}>
-        <Box left={['10%', '10%', "30%"]} width={['90%', "700px"]} sx={{position: "absolute", top:"20%"}}>
-          <Text textAlign="initial" as="h1" color="white" lineHeight={['40px', '40px', "90px"]} fontSize={['40px', '40px', "80px"]}>
-            Hi, I Am 
+      <Box
+        width={['100%', width]}
+        bg="primary"
+        height={['300px', height]}
+        sx={{
+          backgroundImage: 'url(/images/back-2.jpeg)',
+          position: 'relative',
+          textAlign: 'center',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          overflow: 'hidden'
+        }}
+      >
+        <Box left={['10%', '10%', '30%']} width={['90%', '700px']} sx={{ position: 'absolute', top: '20%' }}>
+          <Text textAlign="initial" as="h1" color="white" lineHeight={['40px', '40px', '90px']} fontSize={['40px', '40px', '80px']}>
+            Hi, I Am
           </Text>
-          <Text textAlign="initial" as="h1" color="secondary" lineHeight={['40px', '40px', "90px"]} fontSize={['40px', '40px', "80px"]}>
+          <Text textAlign="initial" as="h1" color="secondary" lineHeight={['40px', '40px', '90px']} fontSize={['40px', '40px', '80px']}>
             Ahmad Noor
           </Text>
-          <Text py="10px" fontFamily="serif" as="p" lineHeight={['20px', '20px', '40px']} fontSize={['20px', '20px', '40px']} px={15} textAlign="initial" color="white" my={30} sx={{borderLeft: `3px solid ${theme.colors.secondary}`}}>
+          <Text
+            py="10px"
+            fontFamily="serif"
+            as="p"
+            lineHeight={['20px', '20px', '40px']}
+            fontSize={['20px', '20px', '40px']}
+            px={15}
+            textAlign="initial"
+            color="white"
+            my={30}
+            sx={{ borderLeft: `3px solid ${theme.colors.secondary}` }}
+          >
             Highly Motivated Software Engineer Who Specialized in Javascript
           </Text>
         </Box>
-     </Box>
+      </Box>
     </Box>
   );
 };
