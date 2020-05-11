@@ -59,7 +59,7 @@ useEffect(() => {
             <link rel="canonical" href="https://www.ahmadnoor.tech" />
               <meta
               name="description"
-              content="Software Engineer at mobileLive"
+              content="I love to work with Javascript and ReactJs.Equally passionate about both frontend and backend applications, I have worked with a wide variety of clients and server-side web development frameworks, languages, and databases.A frequent contributor to open source projects.I keep myself up to date with new technologies and greatly focus on design architecture, code optimization, and all performance-related things.My interest includes client-side optimization techniques and deep Javascript learning"
               />
             <meta
               id="og_description"
