@@ -8,6 +8,7 @@ import {
 } from 'styled-system';
 import Button from './Button';
 import SpanText from './SpanText';
+import Description from './Description';
 
 const Flex = styled(Wrapper)`
 ${compose(layout, position)}`;
@@ -26,6 +27,9 @@ const About = ({ data }) => (
     }}
     bg="primary"
   >
+    <Box sx={{ textAlign: 'center' }}>
+      <Description primarText="About" secondaryText="Me" smallText="About Me" />
+    </Box>
     <Flex
       position={['inherit', 'inherit', 'absolute']}
       left={[0, '5%', '20%']}

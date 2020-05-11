@@ -6,9 +6,9 @@ import SpanText from '../SpanText';
 const Description = ({
   smallText, primarText, secondaryText,
 }) => (
-  <Box width={[1, 1, 1 / 2]} my={20} px={15}>
+  <Box width={[1]} my={20} px={15}>
     <Paragraph
-      fontFamily="sans-serif"
+      fontFamily="open sans,sans-serif"
       sx={{ textTransform: 'uppercase' }}
       fontSize="16px"
       lineHeight="16px"

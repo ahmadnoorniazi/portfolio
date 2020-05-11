@@ -28,15 +28,29 @@ const Header = () => {
         }}
       >
         <Box left={['10%', '10%', '30%']} width={['90%', '700px']} sx={{ position: 'absolute', top: '20%' }}>
-          <Text textAlign="initial" as="h1" color="white" lineHeight={['40px', '40px', '90px']} fontSize={['40px', '40px', '80px']}>
-            Hi, I Am
+          <Text
+            fontFamily="open sans,sans-serif"
+            textAlign="initial"
+            as="h1"
+            color="white"
+            lineHeight={['40px', '40px', '90px']}
+            fontSize={['40px', '40px', '80px']}
+          >
+            Hi, I AM
           </Text>
-          <Text textAlign="initial" as="h1" color="secondary" lineHeight={['40px', '40px', '90px']} fontSize={['40px', '40px', '80px']}>
+          <Text
+            fontFamily="open sans,sans-serif"
+            textAlign="initial"
+            as="h1"
+            color="secondary"
+            lineHeight={['40px', '40px', '90px']}
+            fontSize={['40px', '40px', '80px']}
+          >
             Ahmad Noor
           </Text>
           <Text
             py="10px"
-            fontFamily="serif"
+            fontFamily="open sans,sans-serif"
             as="p"
             lineHeight={['20px', '20px', '40px']}
             fontSize={['20px', '20px', '40px']}
