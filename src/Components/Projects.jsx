@@ -6,13 +6,10 @@ import Description from './Description';
 const Projects = () => (
   <Box
     sx={{
-      position: 'relative',
-      backgroundImage: 'url(/images/wlc-bg1.jpg)',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      overflow: 'hidden'
+      position: 'relative'
     }}
     id="projects"
+    bg="primary"
     pt={50}
     px={[10, 10, 130]}
   >
