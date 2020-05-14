@@ -15,12 +15,10 @@ const Skills = ({data}) => {
   return (
     <Box 
     sx={{
-      backgroundImage:  `url(/images/wlc-bg1.jpg)`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
       overflow: 'hidden'
     }} 
     id="skills" 
+    bg="primary"
     pt={50} 
     px={[10, 10, 130]}>
       <Description primarText="My" secondaryText="Skills" smallText="My Skills"  />
