@@ -18,11 +18,10 @@ const Header = ({ children }) => {
           sx={{ textAlign: 'center', margin: 'auto' }}
         >
           <Box>
-            <Text textAlign="initial" p="5px" letterSpacing={4} color="#c8c6c6" as="h3">Portfolio</Text>
+            <Text textAlign="initial" p="5px" letterSpacing={4} color="#c8c6c6" as="h3">Ahmad</Text>
           </Box>
         </Box>
         <Box
-          p={2}
           width={1}
           display={['none', 'block']}
         >
