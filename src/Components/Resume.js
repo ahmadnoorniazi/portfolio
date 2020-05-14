@@ -14,11 +14,11 @@ import Description from './Description';
 
 function WorkDetail({data, heading, span}) {
   return (
-    <Box sx={{ 
-      backgroundImage: 'url(/images/project-bg.jpg)',  
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      overflow: 'hidden'}} 
+    <Box 
+      sx={{ 
+       overflow: 'hidden'
+      }} 
+      bg="primary"
       id="experience" 
       pt="50px" 
       px={[10, 10, 130]}
