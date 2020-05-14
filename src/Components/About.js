@@ -20,7 +20,7 @@ const About = ({ data }) => (
   <Flex
     id="about"
     width={1}
-    height={['auto', 'auto', '690px']}
+    height={['auto', 'auto', '500px']}
     justifyContent="center"
     sx={{
       position: 'relative',
