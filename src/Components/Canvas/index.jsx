@@ -6,26 +6,32 @@ import {
 } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Box, Flex } from 'rebass';
+import theme from '../../theme';
 
 const Canvas = ({ percentage }) => (
   <Box style={{ width: 200, height: 200 }}>
     <CircularProgressbarWithChildren
       styles={buildStyles({
         strokeLinecap: 'butt',
-        pathColor: '#08d665',
-        trailColor: '#FFFFFF',
+        pathColor: theme.colors.secondary,
+        trailColor: theme.colors.white,
       })}
       value={percentage}
     >
       <Flex sx={{ position: 'relative', textAlign: 'center' }}>
         <strong style={{
-          lineHeight: '42px', fontSize: '48px', color: '#FFFFFF', fontFamily: "'Oswald', sans-serif", fontWeight: 'bolder', marginRight: '25px'
+          lineHeight: '42px',
+          fontSize: '48px',
+          color: theme.colors.white,
+          fontFamily: "'Oswald', sans-serif",
+          fontWeight: 'bolder',
+          marginRight: '25px'
         }}
         >
           {percentage}
         </strong>
         <i style={{
-          color: '#FFFFFF',
+          color: theme.colors.white,
           position: 'absolute',
           bottom: 0,
           right: 0,

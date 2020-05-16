@@ -40,7 +40,7 @@ const About = ({ data }) => (
       <Box width={[1, 1, 1 / 3]}>
         <Image
           sx={{
-            borderRadius: '03%'
+            borderRadius: '50%'
           }}
           width={['350px']}
           height={['350px']}
@@ -55,11 +55,18 @@ const About = ({ data }) => (
         mt={10}
         sx={{ margin: 'auto' }}
       >
-        <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" />
-        <Text as="p" fontWeight={400} fontFamily="sans-serif" sx={{ textAlign: 'justify' }} color="white" py={[20, 20, 25]}>
+        <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" fcolor="#000" />
+        <Text
+          as="p"
+          fontWeight={400}
+          fontFamily="sans-serif"
+          sx={{ textAlign: 'start', textTransform: 'capitalize', opacity: 7 }}
+          color="textColor"
+          py={[20, 20, 25]}
+        >
           {data.bio}
         </Text>
-        <Button px={30}>
+        <Button>
           Download CV
         </Button>
       </Box>

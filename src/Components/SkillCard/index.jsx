@@ -17,7 +17,7 @@ const SkillCard = ({ skillsList, name, Icon }) => {
         ':hover': {
           background: theme.colors.hover
         },
-        border: `5px solid ${theme.colors.secondary}`
+        border: `5px solid ${theme.colors.grayBack}`
       }}
     >
       <Box m={30}>
@@ -28,7 +28,7 @@ const SkillCard = ({ skillsList, name, Icon }) => {
         <Box height="1px" width={1} bg={onHover ? theme.colors.white : theme.colors.secondary} my={20} />
         <Box>
           <ul style={{
-            listStyleType: 'square', color: '#FFFFFF', fontWeight: 'bold'
+            listStyleType: 'square', color: theme.colors.white, fontWeight: 'bold'
           }}
           >
             {

@@ -1,33 +1,32 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Button } from 'rebass';
-import theme from '../../theme';
+import { Button, Box } from 'rebass';
+import Chevron from '../../icons/chevronRight.svg';
 
 const BaseButton = ({
   children, ...rest
 }) => (
   <Button
+    p="2"
     variant="primary"
     py="13px"
-    pr="70px"
     pl="25px"
-    fontWeight="bold"
     sx={{
       lineHeight: '27px',
-      fontSize: '14px',
       textTransform: 'uppercase',
       borderRadius: 4,
-      ':hover': {
-        background: theme.colors.primary,
-        border: `1px solid ${theme.colors.secondary}`,
-        color: theme.colors.secondary,
-      }
+      display: 'flex !important',
     }}
     fontSize={18}
     {...rest}
   >
     {children}
+    <Box bg="#fff" px="2" mx="3" sx={{ borderRadius: 4 }}>
+      <Chevron />
+    </Box>
   </Button>
+
+
 );
 
 export default BaseButton;

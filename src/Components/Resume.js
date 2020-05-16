@@ -32,7 +32,7 @@ function WorkDetail({data, heading, span}) {
         span={item.company}
         heading={item.title}
         >
-        <Text sx={{textAlign: "justify"}} fontFamily="sans-serif" color="#FFFFFF">
+        <Text sx={{textAlign: "justify"}} fontFamily="sans-serif" color="white">
          {item.description}
         </Text>
       </Cards>

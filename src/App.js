@@ -6,8 +6,6 @@ const  Header = lazy(() => import('./Components/Header'));
 const Footer = lazy(() => import('./Components/Footer'));
 const About = lazy(() => import('./Components/About'));
 const Resume = lazy(() => import('./Components/Resume'));
-const Contact = lazy(() => import( './Components/Contact'));
-const Testimonials = lazy(() => import('./Components/Testimonials'));
 const Portfolio = lazy(() => import('./Components/Portfolio'));
 import { ThemeProvider } from 'emotion-theming';
 import theme from './theme';
@@ -23,6 +21,8 @@ function App(){
 const [loading, setIsLoading] = useState(false)
 const [resumeData, setResumeData] = useState([])
 const [isOpen, onClickSideBar] = useState(false)
+const [themeValues, setTheme] = useState(theme)
+
 const { isOpenSideBar  } = useContext(MyContext)
 
 useEffect(() => {
@@ -48,7 +48,8 @@ useEffect(() => {
     return (
       <Provider value={{
         isOpenSideBar: isOpen,
-        onClickSideBar
+        onClickSideBar,
+        theme: themeValues
       }}>
       <Suspense fallback={
       <div style={{textAlign: "center"}}>
@@ -79,9 +80,14 @@ useEffect(() => {
             <meta property="og:url" content="https://www.ahmadnoor.tech" /> 
             <meta property="og:type" content="website" /> 
             <meta name="keywords" content="ahmadnoor, javascript developer,reactjs developer mobileLive, software engneer, frontend developer, ahmadnoor.tech, ahmad noor potfolio"     data-react-helmet="true" />
+
             </Helmet>
-      <ThemeProvider theme={theme}>
-        <div className="App">
+      <ThemeProvider theme={themeValues}>
+        <Box sx={{
+          'body': {
+            background: "#000"
+          }
+        }}>
           <Headers>
             <RenderTabs />
           </Headers>
@@ -92,10 +98,9 @@ useEffect(() => {
           <Resume data={resumeData.resume}/>
           <Portfolio data={resumeData.resume}/>
           <Projects />
-          <Contact data={resumeData.main}/>
           <Footer data={resumeData.main}/>
-        </div>
-        </ThemeProvider>
+        </Box>
+       </ThemeProvider>
     </Suspense>
     </Provider>
   )

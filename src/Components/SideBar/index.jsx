@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Box, Button, Flex } from 'rebass';
 import { MyContext } from '../../globalState';
 import RenderTabs from '../RenderTabs';
+import theme from '../../theme';
 
 const SideBar = () => {
   const { onClickSideBar, isOpenSideBar } = useContext(MyContext);
@@ -15,7 +16,7 @@ const SideBar = () => {
         'z-index': 2,
         top: 0,
         right: 0,
-        backgroundColor: '#2E3D44',
+        backgroundColor: theme.colors.light,
         'overflow-x': 'hidden',
         transition: '1s',
       }}

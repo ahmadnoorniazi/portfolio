@@ -15,12 +15,12 @@ function CardDetail({
       <Card
         width="100%"
       >
-        <Box bg="#FFFFFF" height={350} sx={{ textAlign: 'center', position: 'relative' }}>
+        <Box bg="white" height={350} sx={{ textAlign: 'center', position: 'relative' }}>
           <Image sx={{ position: 'inherit', top: '22%' }} src={imagePath} />
         </Box>
         <Flex bg="rgb(25, 26, 27)" sx={{ position: 'relative' }} flexDirection="column" p={3}>
           <Box mr={4}>
-            <Text textAlign="initial" width={[1, 1, '85%']} color="#FFFFFF" as="h3" fontSize={['24', '24', '40']}>{heading}</Text>
+            <Text textAlign="initial" width={[1, 1, '85%']} color="white" as="h3" fontSize={['24', '24', '40']}>{heading}</Text>
             <Text py={2} color="gray">{span}</Text>
           </Box>
           <Box

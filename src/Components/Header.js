@@ -4,6 +4,8 @@ import { Box as Wrapper, Text } from 'rebass';
 import styled from 'styled-components';
 import { layout, compose, position } from 'styled-system';
 import theme from '../theme';
+import SocialIcons from './Socialcons';
+import './Header.css';
 
 const Box = styled(Wrapper)`
 ${compose(layout, position)}`;
@@ -18,14 +20,7 @@ const Header = () => {
         width={['100%', width]}
         bg="primary"
         height={['300px', height]}
-        sx={{
-          backgroundImage: 'url(/images/back-2.jpeg)',
-          position: 'relative',
-          textAlign: 'center',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          overflow: 'hidden'
-        }}
+        className="bgs"
       >
         <Box left={['10%', '10%', '30%']} width={['90%', '700px']} sx={{ position: 'absolute', top: '20%' }}>
           <Text
@@ -62,6 +57,9 @@ const Header = () => {
           >
             Highly Motivated Software Engineer Who Specialized in Javascript
           </Text>
+          <Box>
+            <SocialIcons align="initial" />
+          </Box>
         </Box>
       </Box>
     </Box>

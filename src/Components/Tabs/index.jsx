@@ -4,6 +4,7 @@ import {
 } from 'rebass';
 import styled from 'styled-components';
 import { border, compose } from 'styled-system';
+import theme from '../../theme';
 
 const Box = styled(Wrapper)`
 ${compose(border)}`;
@@ -16,7 +17,7 @@ function Tabs({ tabsList }) {
     const tabName = window.location.hash.substr(1);
     setActiveTab(tabName || tabsList[0].key);
   });
-  console.log('activeeee', activeTab);
+  const borderValue = `2px solid ${theme.colors.secondary}`;
   return (
     <Flex justifyContent="center" flexWrap="wrap" flexDirection={['column', 'column', 'row']}>
       {tabsList.map((child) => {
@@ -29,12 +30,12 @@ function Tabs({ tabsList }) {
             py="8px"
             textAlign={['initial', 'initial', 'center']}
             borderBottom={
-              [activeTab === key ? '2px solid #08d665' : '2px solid rgba(0, 0, 0, .15)',
-                activeTab === key ? '2px solid #08d665' : 'none']
+              [activeTab === key ? borderValue : `2px solid ${theme.colors.borderLight}`,
+                activeTab === key ? borderValue : 'none']
             }
             sx={{
               ':hover': {
-                borderBottom: '2px solid #08d665'
+                borderBottom: borderValue
               },
             }}
           >
@@ -43,7 +44,7 @@ function Tabs({ tabsList }) {
               py={20}
               px={20}
               onClick={() => setActiveTab(key)}
-              color="#c8c6c6 !important"
+              color="headerText"
               fontSize="16px"
               variant="nav"
               display="block"

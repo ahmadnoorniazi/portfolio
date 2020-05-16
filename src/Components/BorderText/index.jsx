@@ -11,7 +11,15 @@ ${compose(border)}`;
 
 const BorderText = ({ children, textAlign }) => (
   <Box borderLeft={`3px solid ${theme.colors.secondary}`}>
-    <Text color="white" textAlign={textAlign} ml="20px" as="p" fontSize="18px" sx={{ 'text-transform': 'capitalize' }} fontWeight={400}>
+    <Text
+      color="red"
+      textAlign={textAlign}
+      ml="20px"
+      as="p"
+      fontSize="18px"
+      sx={{ 'text-transform': 'capitalize' }}
+      fontWeight={400}
+    >
       {children}
     </Text>
   </Box>

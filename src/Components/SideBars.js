@@ -6,6 +6,14 @@ export default class Sidebar extends Component {
     return (
       <div className="sidebar-container">
         I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+        I am the sidebar!
+
       </div>
     );
   }

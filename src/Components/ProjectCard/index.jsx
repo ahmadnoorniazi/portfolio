@@ -9,7 +9,7 @@ const ProjectCard = () => (
   <Card
     width={1}
     p={4}
-    bg="#131617"
+    bg="grayBack"
     sx={{ position: 'relative' }}
   >
     <Image src="/images/FreedomMobile.png" />
