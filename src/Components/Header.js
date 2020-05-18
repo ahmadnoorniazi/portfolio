@@ -62,7 +62,7 @@ const Header = () => {
             sx={{ borderLeft: `3px solid ${theme.colors.secondary}` }}
           >
             Highly Motivated Software Engineer Who Specialized in Javascript.
-            I help companies and junior developers to write good quality code to make quality software.
+            I help companies and developers to write good quality code to make quality software.
             I love to teach javascript and reactJs
 
           </Text>
