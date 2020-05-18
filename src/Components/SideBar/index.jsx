@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Box, Button, Flex } from 'rebass';
 import { MyContext } from '../../globalState';
-import RenderTabs from '../RenderTabs';
+import RenderTabs from '../../layout/RenderTabs';
 
 const SideBar = () => {
   const { onClickSideBar, isOpenSideBar } = useContext(MyContext);
