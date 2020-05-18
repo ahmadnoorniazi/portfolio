@@ -22,7 +22,7 @@ export const tabsList = [
   },
   {
     label: 'Blog',
-    key: 'blog'
+    key: 'https://blog.ahmadnoor.tech/'
   },
   {
     label: 'Contact',
