@@ -1,50 +1,30 @@
-import React, { useContext } from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import {
-  Box, Flex, Text, Button as Wrapper
+  Flex as Main
 } from 'rebass';
-import Button from '../Button';
-import Interface from '../../icons/interface.svg';
-import { MyContext } from '../../globalState';
+import {
+  compose, border, layout, position
+} from 'styled-system';
+import styled from 'styled-components';
 
-const Header = ({ children }) => {
-  const { isOpenSideBar, onClickSideBar } = useContext(MyContext);
-  return (
-    <Box sx={{ position: 'sticky', zIndex: 2, top: 0 }}>
-      <Flex bg="#000">
-        <Box
-          width={[1 / 6, 1 / 3]}
-          color="white"
-          pl={10}
-          sx={{ textAlign: 'center', margin: 'auto' }}
-        >
-          <Box>
-            <Text textAlign="initial" p="5px" letterSpacing={4} color="#c8c6c6" as="h3">Ahmad</Text>
-          </Box>
-        </Box>
-        <Box
-          width={1}
-          display={['none', 'block']}
-        >
-          {children}
-        </Box>
-        <Box sx={{ left: 0, textAlign: 'end' }} width={[1, 1, 1 / 4]} p="7px" m="auto">
-          <Button display={['none', 'none', 'block']}>
-            Download CV
-          </Button>
-          <Box display={['block', 'block', 'none']}>
-            <Wrapper
-              variant="outline"
-              onClick={() => onClickSideBar(!isOpenSideBar)}
-            >
-              <Interface />
-            </Wrapper>
-          </Box>
+const Flex = styled(Main)`
+${compose(layout, border, position)}`;
 
-        </Box>
-      </Flex>
-    </Box>
+const Header = ({ children, ...rest }) => (
+  <Flex
+    width={1}
+    bg="primary"
+    color="white"
+    position="fixed"
+    sx={{
+      zIndex: 2, top: 0, left: 0, right: 0
+    }}
+    {...rest}
+  >
+    {children}
+  </Flex>
 
-  );
-};
+);
 
 export default Header;
