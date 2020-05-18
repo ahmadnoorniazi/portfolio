@@ -5,7 +5,7 @@ import { Flex, Box } from 'rebass'
 import Description from './Description';
 import Canvas from './Canvas';
 import Paragraph from './Paragraph';
-import SkillCard from './SkillCard';
+import SkillCard from '../layout/SkillCard';
 import SpanText from './SpanText';
 import Devops from '../icons/settings.svg';
 import Frontend from '../icons/applicant.svg'
