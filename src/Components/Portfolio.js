@@ -10,8 +10,9 @@ import SpanText from './SpanText';
 import Devops from '../icons/settings.svg';
 import Frontend from '../icons/applicant.svg'
 import Backend from '../icons/computing-cloud.svg'
+import witTheme from '../utils/themeHoc';
 
-const Skills = ({data}) => {
+const Skills = ({data, theme}) => {
   return (
     <Box 
     sx={{
@@ -26,20 +27,28 @@ const Skills = ({data}) => {
       {  [{
         name: 'Back-End Development',
         Icon: Backend ,
-        skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
+        skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl', 'MongoDB', 'MYSQL']
       },
       {
         name: 'Frontend Development',
         Icon: Frontend,
-        skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
+        skillsList: ['ReactJs', 'ReduxJs', 'VueJs', 'TDD: Jest, Enzyme, react-testing-library']
       },
       {
-        name: 'DevOps',
+        name: 'Tools & System config',
         Icon: Devops,
-        skillsList: ['NodeJs', 'ExpressJs', 'Rest Artitechure', 'GraphQl']
+        skillsList: ['Webpack', 'AWS, EC2, S3, Cloudfront' , 'Digital Ocean', 'Linux', 'MacOs']
       }
     ].map((item) => (
-       <Box width={[1, 1, 1 / 3]} p={3}>
+       <Box 
+       width={[1, 1, 1 / 4]} p={3} mx={3} 
+       bg="primary"
+       sx={{
+        ':hover': {
+          background: theme.colors.hover
+        },
+        border: `10px solid ${theme.colors.grayBorder}`
+      }}>
          <SkillCard key={item.name} {...item}   />
        </Box>
       ))}
@@ -48,4 +57,4 @@ const Skills = ({data}) => {
   );
 };
 
-export default Skills;
+export default witTheme(Skills);

@@ -13,15 +13,8 @@ const SkillCard = ({ skillsList, name, Icon }) => {
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
       width={1}
-      bg="primary"
-      sx={{
-        ':hover': {
-          background: theme.colors.hover
-        },
-        border: `10px solid ${theme.colors.grayBorder}`
-      }}
     >
-      <Box m={30}>
+      <Box>
         <Box sx={{ textAlign: 'center' }}>
           <Icon fill={onHover ? theme.colors.white : theme.colors.secondary} />
           <Heading fontWeight="bold" color={onHover ? theme.colors.white : theme.colors.secondary}>{name}</Heading>
