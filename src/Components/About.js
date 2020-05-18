@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import {
   layout, compose, position, typography
 } from 'styled-system';
-import Button from './Button';
+import Button from '../layout/IconButton';
 import SpanText from './SpanText';
 import Description from './Description';
 
@@ -44,7 +44,7 @@ const About = ({ data }) => (
           }}
           width={['350px']}
           height={['350px']}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQvq-NTsapFOvnWCVeU-guFDAQWyI5yCRyEzFnwYApa5zByx-R&usqp=CAU"
+          src="/images/ahmad_noor.jpeg"
         />
       </Box>
       <Box
@@ -55,11 +55,18 @@ const About = ({ data }) => (
         mt={10}
         sx={{ margin: 'auto' }}
       >
-        <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" />
-        <Text as="p" fontWeight={400} fontFamily="sans-serif" sx={{ textAlign: 'justify' }} color="white" py={[20, 20, 25]}>
+        <SpanText firstText="FAILURE IS THE CONDIMENT THAT GIVES" secondText="SUCCESS" fcolor="#000" />
+        <Text
+          as="p"
+          fontWeight={400}
+          fontFamily="sans-serif"
+          sx={{ textAlign: 'start', textTransform: 'capitalize', opacity: 7 }}
+          color="white"
+          py={[20, 20, 25]}
+        >
           {data.bio}
         </Text>
-        <Button px={30}>
+        <Button>
           Download CV
         </Button>
       </Box>
