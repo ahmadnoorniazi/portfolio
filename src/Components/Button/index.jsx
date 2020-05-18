@@ -1,29 +1,27 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Button } from 'rebass';
-import theme from '../../theme';
+import { Button as Base } from 'rebass';
+import {
+  typography, space, color, compose, border
+} from 'styled-system';
+import styled from 'styled-components';
+
+const Button = styled(Base)`
+${compose(typography, space, color, border)}`;
 
 const BaseButton = ({
   children, ...rest
 }) => (
   <Button
-    variant="primary"
-    py="13px"
-    pr="70px"
-    pl="25px"
+    p={3}
+    display="flex"
     fontWeight="bold"
+    fontSize={1}
+    borderRadius={4}
     sx={{
       lineHeight: '27px',
-      fontSize: '14px',
       textTransform: 'uppercase',
-      borderRadius: 4,
-      ':hover': {
-        background: theme.colors.primary,
-        border: `1px solid ${theme.colors.secondary}`,
-        color: theme.colors.secondary,
-      }
     }}
-    fontSize={18}
     {...rest}
   >
     {children}
