@@ -4,7 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Flex, Box, Text } from 'rebass';
+import { Flex, Box } from 'rebass';
 import Cards from './Card';
 import SpanText from './SpanText';
 import BorderText from './BorderText';
@@ -32,9 +32,15 @@ function WorkDetail({data, heading, span}) {
         span={item.company}
         heading={item.title}
         >
-        <Text sx={{textAlign: "justify"}} fontFamily="sans-serif" color="#FFFFFF">
+        <Paragraph 
+          sx={{
+            textTransform: 'capitalize'
+          }}
+          fontFamily="sans-serif" 
+          color="#FFFFFF"
+        >
          {item.description}
-        </Text>
+        </Paragraph>
       </Cards>
     </Box>
     ))}
