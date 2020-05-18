@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex } from 'rebass';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../layout/ProjectCard';
 import Description from './Description';
 
 const Projects = () => (
