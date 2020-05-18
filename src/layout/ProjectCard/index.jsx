@@ -5,14 +5,14 @@ import {
 import theme from '../../theme';
 import LinkIcon from '../../icons/multimedia.svg';
 
-const ProjectCard = () => (
+const ProjectCard = ({ project }) => (
   <Card
     width={1}
     p={4}
     bg="grayBorder"
     sx={{ position: 'relative' }}
   >
-    <Image src="/images/FreedomMobile.png" />
+    <Image src={project.image} height={['auto', 'auto', '300px']} sx={{ objectFit: 'fill' }} />
 
     <Box sx={{
       position: 'absolute',

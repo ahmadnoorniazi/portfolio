@@ -50,7 +50,7 @@ function WorkDetail({data, heading, span}) {
       data.platforms.map(val => (
         <Box width={[1,1, 1 / 4]} sx={{textAlign: "-webkit-center"}}>
           <Canvas percentage={val.level} />
-          <Paragraph fontSize="24px" fontWeight={600} my={15} color="white">
+          <Paragraph textAlign="center" fontSize="24px" fontWeight={600} my={15} color="white">
             {val.name}
           </Paragraph>
         </Box>

@@ -136,32 +136,20 @@
       {
         "title":"Freedom Mobile",
         "category":"My Travel Blog for my post-university travels",
-        "image":"canadian-wanderlust.jpg",
+        "image":"/images/FreedomMobile.png",
         "url":"https://www.canadianwanderlust.com"
       },
       {
-        "title":"Fury Fighting Gear",
+        "title":"Freedom Shop",
         "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
+        "image":"/images/FreedomShop.png",
         "url":"http://www.timbakerdev.com"
       },
       {
-        "title":"Original Thai Food",
+        "title":"Scheduling Plus",
         "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
+        "image":"/images/ScedulingPlus.png",
         "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"smirkspace.jpg",
-        "url":"http://www.smirkspace.com"
       }
     ]
   },

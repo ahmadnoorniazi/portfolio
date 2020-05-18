@@ -41,7 +41,7 @@ const Skills = ({data, theme}) => {
       }
     ].map((item) => (
        <Box 
-       width={[1, 1, 1 / 4]} p={3} mx={3} 
+       width={[1, 1, 1 / 4]} p={4} mr={3} my={3}
        bg="primary"
        sx={{
         ':hover': {
