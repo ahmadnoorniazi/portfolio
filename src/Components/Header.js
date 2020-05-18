@@ -4,6 +4,7 @@ import { Box as Wrapper, Text } from 'rebass';
 import styled from 'styled-components';
 import { layout, compose, position } from 'styled-system';
 import theme from '../theme';
+import SocialLinks from '../layout/SocialLinks';
 
 const Box = styled(Wrapper)`
 ${compose(layout, position)}`;
@@ -17,7 +18,7 @@ const Header = () => {
       <Box
         width={['100%', width]}
         bg="primary"
-        height={['300px', height]}
+        height={['450px', height]}
         sx={{
           backgroundImage: 'url(/images/back-2.jpeg)',
           position: 'relative',
@@ -53,15 +54,19 @@ const Header = () => {
             fontFamily="open sans,sans-serif"
             as="p"
             lineHeight={['20px', '20px', '40px']}
-            fontSize={['20px', '20px', '40px']}
+            fontSize={['15px', '15px', '20px']}
             px={15}
             textAlign="initial"
             color="white"
             my={30}
             sx={{ borderLeft: `3px solid ${theme.colors.secondary}` }}
           >
-            Highly Motivated Software Engineer Who Specialized in Javascript
+            Highly Motivated Software Engineer Who Specialized in Javascript.
+            I help companies and junior developers to write good quality code to make quality software.
+            I love to teach javascript and reactJs
+
           </Text>
+          <SocialLinks />
         </Box>
       </Box>
     </Box>
