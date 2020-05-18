@@ -3,7 +3,11 @@ import React from 'react';
 import { Text } from 'rebass';
 
 const Paragraph = ({ children, ...rest }) => (
-  <Text as="p" {...rest}>
+  <Text
+    as="p"
+    textAlign="initial"
+    {...rest}
+  >
     {children}
   </Text>
 );
