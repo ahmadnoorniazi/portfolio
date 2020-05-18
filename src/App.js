@@ -7,17 +7,16 @@ const Footer = lazy(() => import('./Components/Footer'));
 const About = lazy(() => import('./Components/About'));
 const Resume = lazy(() => import('./Components/Resume'));
 const Contact = lazy(() => import( './Components/Contact'));
-const Testimonials = lazy(() => import('./Components/Testimonials'));
 const Portfolio = lazy(() => import('./Components/Portfolio'));
 import { ThemeProvider } from 'emotion-theming';
 import theme from './theme';
 import { Flex, Box, Text} from 'rebass'
-import Headers from './Components/Headers'
+import Headers from './layout/Header'
 import {Helmet} from "react-helmet";
 import Projects from "./Components/Projects";
 import { Provider, MyContext } from './globalState';
 import SideBar from './Components/SideBar';
-import RenderTabs from './Components/RenderTabs';
+import RenderTabs from './layout/RenderTabs';
 
 function App(){
 const [loading, setIsLoading] = useState(false)
@@ -72,9 +71,9 @@ useEffect(() => {
               content="Software Engineer at mobileLive"
             />
             <meta
-              id="og_title"
+              id="og_image"
               property="og:image"
-              content="https://cdn.searchenginejournal.com/wp-content/uploads/2018/07/SEO-and-JavaScript-6-Things-You-Need-to-Know-1520x800.png"
+              content="/images/ahmad_noor.jpeg"
             />
             <meta property="og:url" content="https://www.ahmadnoor.tech" /> 
             <meta property="og:type" content="website" /> 
