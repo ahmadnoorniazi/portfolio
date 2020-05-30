@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 
 import React from 'react';
 import { Box as Wrapper, Text } from 'rebass';
@@ -37,7 +38,7 @@ const Header = () => {
             lineHeight={['40px', '40px', '90px']}
             fontSize={['40px', '40px', '80px']}
           >
-            Hi, I AM
+            👋 Hi, I AM
           </Text>
           <Text
             fontFamily="open sans,sans-serif"
