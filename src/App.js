@@ -17,12 +17,21 @@ import Projects from "./Components/Projects";
 import { Provider, MyContext } from './globalState';
 import SideBar from './Components/SideBar';
 import RenderTabs from './layout/RenderTabs';
+import ScrollButton from './Components/ScrollButton';
+import useScroll from './utils/useScroll'
 
 function App(){
 const [loading, setIsLoading] = useState(false)
 const [resumeData, setResumeData] = useState([])
 const [isOpen, onClickSideBar] = useState(false)
+const [scrollTop, setScrollTop] = useState("")
+
 const { isOpenSideBar  } = useContext(MyContext)
+const {    
+  scrollY,
+  scrollX,
+  scrollDirection
+} = useScroll()
 
 useEffect(() => {
   const getResumeData = async () => {
@@ -38,12 +47,21 @@ useEffect(() => {
   getResumeData();
 }, [])
 
+useEffect(() => {
+  setScrollTop(window.scrollY)
+})
+console.log('oooooo', scrollY,
+scrollX,
+scrollDirection)
+
     if (loading){
       return (
         <div style={{textAlign: "center"}}>
       <img alt="loader" style={{ position: "absolute", top: "50%"}} src='/images/loader.gif' /></div>
       )
     }
+    const height = window.innerHeight - 80;
+
     return (
       <Provider value={{
         isOpenSideBar: isOpen,
@@ -85,7 +103,9 @@ useEffect(() => {
             <RenderTabs />
           </Headers>
           <Header data={resumeData.main}/>
-
+          <Box sx={{top: height, position: "absolute", right: "48%" }}>
+            <ScrollButton />
+          </Box>
           <SideBar />
           <About data={resumeData.main}/>
           <Resume data={resumeData.resume}/>
